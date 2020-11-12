@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>hopbike</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    </head>
+    <body style="max-width: 100%; overflow-x: auto;"  >
+        <div  style="padding:0px;" >
+            <img class="logo" src="assets/hoplogo.png" style="
+            position: absolute;
+            left: 5%;
+            top: 2%;
+            ">            
+            <video style="display: block; line-height: 0px;" id="myvideo" width="100%" controls loop autoplay="true">
+            <source src="assets/intro-video.mp4" type="video/mp4">
+            </video>
+            <div class="parallax-window-1" data-parallax="scroll"></div>
+
+            <div  style="padding:0px;" >
+                <img  width="100%" src="assets/future-is-smart.png" />
+            </div>
+            <div class="parallax-window-2" data-parallax="scroll"></div>
+
+            <div class="form-section">
+                <div class="book-drive"  >
+                    <div >Book Your </div>
+                    <div> Test Drive </div>
+                    <div> Now!</div>
+            </div>
+            <div class="form-block" >
+                <img class = "form-logo"  src="assets/hop-logo-2.png">              
+                  <div class="form" >
+                    <div style="color: white; font-size: 20px; margin-bottom: 5%; "  >I Am Interested!</div>
+                    <form>
+                        <input type="text" id="name" name="name" placeholder="Name"><br>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+                        <input type="text" id="email" name="email" placeholder="Email ID"> <br>
+                        <div class="submit-button" >Submit</div>    
+                    </form>
+                </div>
+                <div class="checkbox"   >
+                    <input style="width: auto;" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label style="display: inline;" for="vehicle1"> I agree by submitting this form I can be reached out through a call,mail or whatsapp message</label><br>
+
+                </div>
+
+                <div>    
+                </div>
+
+                <!-- <img  width="100%" src="assets/form-background.png" /> -->
+
+            </div>
+            </div>
+
+     
+        </div>
+
+    </body>
+    <script charset="utf-8" type="text/javascript" >
+    $('.parallax-window-1').parallax({imageSrc: 'assets/benefits.png', naturalWidth : window.innerWidth, naturalHeight: window.innerHeight});
+    $('.parallax-window-2').parallax({imageSrc: 'assets/infinite-energy.png'});
+    jQuery(window).trigger('resize').trigger('scroll');
+
+    var video = document.getElementById("myvideo");
+        video.muted = true;
+        video.play();
+
+        video.addEventListener('click', ev => {
+        console.log('ev: ', ev);
+        video.muted = false;
+        document.getElementById("myvideo").play()
+    })
+
+        // var x = document.getElementById("myvideo");
+        // x.autoplay = true;
+        // x.load();
+    </script>
+
+</html>

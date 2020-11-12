@@ -1,0 +1,174 @@
+/* ::-webkit-media-controls {
+    display:none !important;
+  } */
+
+body{
+  font-family: 'Montserrat';
+
+} 
+.logo {
+
+    width: 5%;
+}  
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 15%;
+    }
+  }
+.form{
+
+  margin-top: 15em;
+  /* background-attachment: fixed;
+
+  background-image: url('assets/form-background.png'); */
+}
+.book-drive{
+  padding:0px;
+  background-color: #10204d;
+  flex: 4; 
+  text-align: center;  
+  color:white; 
+  font-size: 60px; 
+  padding: 10%;
+  font-weight: bold;
+  display: inline-block;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.form {
+  text-align: center;
+  width: 60%;
+  display: inline-block;
+
+}
+input {
+  margin-bottom: 5%;
+  border-style: solid;
+  border-color:#10204d ;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 10px;
+
+  display: inline-block;
+  width: 100%;
+
+
+}
+
+.submit-button{
+  color: white;
+  background-color: #10204d;
+  max-width:  100%;
+  text-align: center;
+  margin-top: 10%;
+  border-radius: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+}
+.parallax-window-1 {
+  
+  min-height: 600px;
+	background: transparent;
+  /* background-color: yellow; */
+}.parallax-window-2 {
+  
+  min-height: 600px;
+	background: transparent;
+  /* background-color: yellow; */
+}
+
+.form-logo{
+  position: absolute;
+  left: -10em;
+  top: -14em;
+  z-index: -1;
+  width:130%;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.form-section{
+
+  display: flex;
+
+}
+
+.checkbox {
+
+  display: flex;
+  padding:5%;
+  padding-top: 0px;
+  padding-left: 25px
+
+}
+.checkbox label {
+  padding:0px !important ;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+  padding:5%
+
+}
+
+
+.form-block{
+
+  flex: 3; 
+  padding: 0px;  
+  text-align: center;  
+  position: relative; 
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .form-section {
+    display: block;
+  } 
+  .book-drive{
+    display: block;
+    font-size: 30px;
+  }
+
+  .form-logo{
+    position: absolute;
+    left: -8em;
+    top: -12em;
+    z-index: -1;
+    width:130%;
+  }
+
+  .form{
+    margin-top: 6em
+  }
+  .parallax-window-1 {
+  
+    min-height: 200px;
+    background: transparent;
+    /* background-color: yellow; */
+  }.parallax-window-2 {
+    
+    min-height: 200px;
+    background: transparent;
+    /* background-color: yellow; */
+  }
+
+}
