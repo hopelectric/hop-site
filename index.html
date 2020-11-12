@@ -15,9 +15,10 @@
     <body style="max-width: 100%; overflow-x: auto;"  >
         <div  style="padding:0px;" >
             <img class="logo" src="assets/hoplogo.png" style="
-            position: absolute;
+            position: fixed;
             left: 5%;
             top: 2%;
+            width: 10%;
             ">            
             <video style="display: block; line-height: 0px;" id="myvideo" width="100%" controls loop autoplay="true">
             <source src="assets/intro-video.mp4" type="video/mp4">
@@ -25,7 +26,7 @@
             <div class="parallax-window-1" data-parallax="scroll"></div>
 
             <div  style="padding:0px;" >
-                <img  width="100%" src="assets/future-is-smart.png" />
+                <img  width="100%" src="assets/infinite-energy.png" />
             </div>
             <div class="parallax-window-2" data-parallax="scroll"></div>
 
@@ -66,13 +67,12 @@
     </body>
     <script charset="utf-8" type="text/javascript" >
     $('.parallax-window-1').parallax({imageSrc: 'assets/benefits.png', naturalWidth : window.innerWidth, naturalHeight: window.innerHeight});
-    $('.parallax-window-2').parallax({imageSrc: 'assets/infinite-energy.png'});
-    jQuery(window).trigger('resize').trigger('scroll');
+    $('.parallax-window-2').parallax({imageSrc: 'assets/future-is-smart.png'});
+    // jQuery(window).trigger('resize').trigger('scroll');
 
     var video = document.getElementById("myvideo");
         video.muted = true;
         video.play();
-
         video.addEventListener('click', ev => {
         console.log('ev: ', ev);
         video.muted = false;
