@@ -138,8 +138,28 @@ input {
 
 }
 
+.mobile{
+  display: none;
+}
 
-@media only screen and (max-width: 600px) {
+.desktop{
+  display: block;
+}
+
+.parallax-window-1-desktop {
+  
+  min-height: 800px;
+  background: transparent;
+  /* background-color: yellow; */
+}
+.parallax-window-2-desktop {
+  
+  min-height: 800px;
+  background: transparent;
+  /* background-color: yellow; */
+}
+
+@media only screen and (max-width: 768px) {
   .form-section {
     display: block;
   } 
@@ -159,16 +179,24 @@ input {
   .form{
     margin-top: 6em
   }
-  .parallax-window-1 {
+  .parallax-window-1-mobile {
   
-    min-height: 200px;
+    min-height: 800px;
     background: transparent;
     /* background-color: yellow; */
-  }.parallax-window-2 {
+  }
+  .parallax-window-2-mobile {
     
-    min-height: 200px;
+    /* min-height: 800px; */
     background: transparent;
     /* background-color: yellow; */
+  }
+
+  .mobile{
+    display: block;
+  }
+  .desktop {
+    display: none;
   }
 
 }

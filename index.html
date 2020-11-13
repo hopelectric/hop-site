@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.5/parallax.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="main.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -14,21 +17,47 @@
     </head>
     <body style="max-width: 100%; overflow-x: auto;"  >
         <div  style="padding:0px;" >
-            <img class="logo" src="assets/hoplogo.png" style="
+            <!-- <img class="logo" src="assets/hoplogo.png" style="
             position: fixed;
             left: 5%;
             top: 2%;
             width: 10%;
-            ">            
-            <video style="display: block; line-height: 0px;" id="myvideo" width="100%" controls loop autoplay="true">
-            <source src="assets/intro-video.mp4" type="video/mp4">
-            </video>
-            <div class="parallax-window-1" data-parallax="scroll"></div>
-
-            <div  style="padding:0px;" >
-                <img  width="100%" src="assets/infinite-energy.png" />
+            ">             -->
+            <div class="desktop" >
+                <video class="desktop" style="display: block; line-height: 0px;" id="myvideo" width="100%" controls loop autoplay="true">
+                    <source src="assets/intro-video.mp4" type="video/mp4">
+                    </video>
             </div>
-            <div class="parallax-window-2" data-parallax="scroll"></div>
+            <div class="mobile" >
+                <video class="desktop" style="display: block; line-height: 0px;" id="mymobilevideo" width="100%" controls loop autoplay="true">
+                    <source src="assets/mobile-video.mp4" type="video/mp4">
+                    </video>
+            </div>
+
+            <!-- <div class="parallax-window-1-desktop desktop " data-parallax="scroll"></div>
+            <div class="parallax-window-1-mobile mobile " data-parallax="scroll"></div> -->
+
+            <div  class="desktop" style="padding:0px;" >
+                <img  width="100%" src="assets/benefits.png" />
+            </div>
+            <div  class="mobile" style="padding:0px;" >
+                <img  width="100%" src="assets/benefits-mobile.jpg" />
+            </div>
+
+            <div  class="desktop" style="padding:0px;" >
+                <img id="infinite-energy"  width="100%" src="assets/infinite-energy.png" />
+            </div>
+            <div  class="mobile" style="padding:0px;" >
+                <img  width="100%" src="assets/infinite-energy-mobile.jpg" />
+            </div>
+
+            <!-- <div class="parallax-window-2-desktop desktop" data-parallax="scroll"></div> -->
+            <div style="text-align: center;"  class="mobile">
+                <img class="future-image" width="77%" src="assets/future-mobile.jpg" />
+            </div>
+            <div style="text-align: center;"  class="desktop">
+                <img class="future-image" width="77%"  src="assets/future-is-smart.png" />
+            </div>
 
             <div class="form-section">
                 <div class="book-drive"  >
@@ -40,11 +69,11 @@
                 <img class = "form-logo"  src="assets/hop-logo-2.png">              
                   <div class="form" >
                     <div style="color: white; font-size: 20px; margin-bottom: 5%; "  >I Am Interested!</div>
-                    <form>
+                    <form id="contact-form" >
                         <input type="text" id="name" name="name" placeholder="Name"><br>
                         <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
                         <input type="text" id="email" name="email" placeholder="Email ID"> <br>
-                        <div class="submit-button" >Submit</div>    
+                        <div id="submit-button" class="submit-button" >Submit</div>    
                     </form>
                 </div>
                 <div class="checkbox"   >
@@ -66,19 +95,51 @@
 
     </body>
     <script charset="utf-8" type="text/javascript" >
-    $('.parallax-window-1').parallax({imageSrc: 'assets/benefits.png', naturalWidth : window.innerWidth, naturalHeight: window.innerHeight});
-    $('.parallax-window-2').parallax({imageSrc: 'assets/future-is-smart.png'});
-    // jQuery(window).trigger('resize').trigger('scroll');
+    jQuery(window).trigger('resize').trigger('scroll');
 
-    var video = document.getElementById("myvideo");
+    var image = document.getElementsByClassName("future-image")
+
+    new simpleParallax(image)
+
+    if(window.innerWidth < 768) {
+        console.log("We are running mobile");
+        var video = document.getElementById("mymobilevideo");
+        video.muted = true;
+        video.play();
+        video.addEventListener('click', ev => {
+            console.log('ev: ', ev);
+            video.muted = false;
+            document.getElementById("myvideo").play()
+         })
+
+    } else {
+        console.log("running desktop");
+
+        var video = document.getElementById("myvideo");
         video.muted = true;
         video.play();
         video.addEventListener('click', ev => {
         console.log('ev: ', ev);
         video.muted = false;
         document.getElementById("myvideo").play()
-    })
 
+    })
+    }
+
+
+    const submitButton = document.getElementById("submit-button")
+    submitButton.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        swal({
+            title: "Submitted!",
+            text:"Thanks for showing interest. We will get in touch with you shortly",
+            icon: "success",
+        });
+
+
+    }
+    )
         // var x = document.getElementById("myvideo");
         // x.autoplay = true;
         // x.load();
