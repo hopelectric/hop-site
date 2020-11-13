@@ -37,11 +37,11 @@
             <!-- <div class="parallax-window-1-desktop desktop " data-parallax="scroll"></div>
             <div class="parallax-window-1-mobile mobile " data-parallax="scroll"></div> -->
 
-            <div  class="desktop" style="padding:0px;" >
-                <img  width="100%" src="assets/benefits.png" />
+            <div style="text-align: center;"  class="desktop" style="padding:0px;" >
+                <img  class="scooter-image"  width="87%"  src="assets/benefits.png" />
             </div>
-            <div  class="mobile" style="padding:0px;" >
-                <img  width="100%" src="assets/benefits-mobile.jpg" />
+            <div style="text-align: center;"  class="mobile" style="padding:0px;" >
+                <img  class="scooter-image" width="87%" src="assets/benefits-mobile.jpg" />
             </div>
 
             <div  class="desktop" style="padding:0px;" >
@@ -53,10 +53,10 @@
 
             <!-- <div class="parallax-window-2-desktop desktop" data-parallax="scroll"></div> -->
             <div style="text-align: center;"  class="mobile">
-                <img class="future-image" width="77%" src="assets/future-mobile.jpg" />
+                <img class="parrallax-image" width="77%" src="assets/future-mobile.jpg" />
             </div>
             <div style="text-align: center;"  class="desktop">
-                <img class="future-image" width="77%"  src="assets/future-is-smart.png" />
+                <img class="parrallax-image" width="77%"  src="assets/future-is-smart.png" />
             </div>
 
             <div class="form-section">
@@ -97,10 +97,12 @@
     <script charset="utf-8" type="text/javascript" >
     jQuery(window).trigger('resize').trigger('scroll');
 
-    var image = document.getElementsByClassName("future-image")
+    var image = document.getElementsByClassName("parrallax-image")
+    var scooter = document.getElementsByClassName("scooter-image")
 
     new simpleParallax(image)
 
+    new simpleParallax(scooter,{scale:1.15})
     if(window.innerWidth < 768) {
         console.log("We are running mobile");
         var video = document.getElementById("mymobilevideo");
