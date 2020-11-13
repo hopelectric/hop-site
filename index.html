@@ -9,6 +9,7 @@
         <!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.5/parallax.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="main.css">
@@ -17,12 +18,12 @@
     </head>
     <body style="max-width: 100%; overflow-x: auto;"  >
         <div  style="padding:0px;" >
-            <!-- <img class="logo" src="assets/hoplogo.png" style="
+            <img class="logo desktop" src="assets/hoplogo.png" style="
             position: fixed;
             left: 5%;
             top: 2%;
             width: 10%;
-            ">             -->
+            ">            
             <div class="desktop" >
                 <video class="desktop" style="display: block; line-height: 0px;" id="myvideo" width="100%" controls loop autoplay="true">
                     <source src="assets/intro-video.mp4" type="video/mp4">
@@ -34,12 +35,11 @@
                     </video>
             </div>
 
-            <!-- <div class="parallax-window-1-desktop desktop " data-parallax="scroll"></div>
-            <div class="parallax-window-1-mobile mobile " data-parallax="scroll"></div> -->
+            <div class="parallax-window-1-desktop desktop " data-parallax="scroll"></div>
 
-            <div style="text-align: center;"  class="desktop" style="padding:0px;" >
+            <!-- <div style="text-align: center;"  class="desktop" style="padding:0px;" >
                 <img  class="scooter-image"  width="71.43%"  src="assets/Untitled design(9).jpg" />
-            </div>
+            </div> -->
             <div style="text-align: center;"  class="mobile" style="padding:0px;" >
                 <img  class="scooter-image" width="71.43%" src="assets/Untitled design(10).jpg" />
             </div>
@@ -51,43 +51,49 @@
                 <img  width="100%" src="assets/infinite-energy-mobile.jpg" />
             </div>
 
-            <!-- <div class="parallax-window-2-desktop desktop" data-parallax="scroll"></div> -->
+            <div class="parallax-window-2-desktop desktop" data-parallax="scroll"></div>
             <div style="text-align: center;"  class="mobile">
                 <img class="parrallax-image" width="77%" src="assets/future-mobile.jpg" />
             </div>
-            <div style="text-align: center;"  class="desktop">
+            <!-- <div style="text-align: center;"  class="desktop">
                 <img class="parrallax-image" width="77%"  src="assets/Experience-Future_DESKTOP.jpg" />
-            </div>
+            </div> -->
 
             <div class="form-section">
-                <div class="book-drive"  >
+                <div class="book-drive mobile "  >
                     <div >Book Your </div>
                     <div> Test Drive </div>
                     <div> Now!</div>
-            </div>
-            <div class="form-block" >
-                <img class = "form-logo"  src="assets/hop-logo-2.png">              
-                  <div class="form" >
-                    <div style="color: white; font-size: 20px; margin-bottom: 5%; "  >I Am Interested!</div>
-                    <form id="contact-form" >
-                        <input required type="text" id="name" name="name" placeholder="Name"><br>
-                        <input required type="text" id="phone" name="phone" placeholder="Phone Number"><br>
-                        <input type="text" id="email" name="email" placeholder="Email ID"> <br>
-                        <input type="submit" id="submit-button" class="submit-button" >    
                 </div>
-                        <div class="checkbox"   >
-                            <input required style="width: auto;" type="checkbox" id="checkbox" name="checkbox" value="true">
-                            <label style="display: inline;" for="checkbox"> I agree by submitting this form I can be reached out through a call,mail or whatsapp message</label><br>
+                <div class="form-block" >
+                    <img class = "form-logo"  src="assets/hop-logo-2.png">              
+                    <div class="form" >
+                        <div style="color: white; font-size: 20px; margin-bottom: 5%; "  >I Am Interested!</div>
+                        <form id="contact-form" >
+                            <input required type="text" id="name" name="name" placeholder="Name"><br>
+                            <input required type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+                            <input type="text" id="email" name="email" placeholder="Email ID"> <br>
+                            <input type="submit" id="submit-button" class="submit-button" >    
+                    </div>
+                            <div class="checkbox"   >
+                                <input required style="width: auto;" type="checkbox" id="checkbox" name="checkbox" value="true">
+                                <label style="display: inline;" for="checkbox"> I agree by submitting this form I can be reached out through a call,mail or whatsapp message</label><br>
 
-                        </div>
-                    </form>
+                            </div>
+                        </form>
 
-                <div>    
+                    <div>    
+                    </div>
+
+                    <!-- <img  width="100%" src="assets/form-background.png" /> -->
+
+                </div>
+                <div class="book-drive desktop "  >
+                    <div >Book Your </div>
+                    <div> Test Drive </div>
+                    <div> Now!</div>
                 </div>
 
-                <!-- <img  width="100%" src="assets/form-background.png" /> -->
-
-            </div>
             </div>
 
      
@@ -114,6 +120,8 @@
 
     } else {
         console.log("running desktop");
+        $('.parallax-window-1-desktop').parallax({imageSrc: 'assets/Untitled design(9).jpg'});
+        $('.parallax-window-2-desktop').parallax({imageSrc: 'assets/Experience-Future_DESKTOP.jpg'});
 
         var video = document.getElementById("myvideo");
         video.muted = true;

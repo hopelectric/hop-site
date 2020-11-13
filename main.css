@@ -85,10 +85,10 @@ input {
 
 .form-logo{
   position: absolute;
-  left: -10em;
+  left: -11em;
   top: -14em;
   z-index: -1;
-  width:130%;
+  width:110%;
 }
 
 .checkbox-container {
@@ -131,7 +131,7 @@ input {
 
 .form-block{
 
-  flex: 3; 
+  flex: 5; 
   padding: 0px;  
   text-align: center;  
   position: relative; 
@@ -148,13 +148,13 @@ input {
 
 .parallax-window-1-desktop {
   
-  min-height: 800px;
+  min-height: 600px;
   background: transparent;
   /* background-color: yellow; */
 }
 .parallax-window-2-desktop {
   
-  min-height: 800px;
+  min-height: 600px;
   background: transparent;
   /* background-color: yellow; */
 }
