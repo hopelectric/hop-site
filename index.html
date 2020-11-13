@@ -53,10 +53,10 @@
 
             <!-- <div class="parallax-window-2-desktop desktop" data-parallax="scroll"></div> -->
             <div style="text-align: center;"  class="mobile">
-                <img class="parrallax-image" width="77%" src="assets/future-mobile.jpg" />
+                <img class="parrallax-image" width="83.33%" src="assets/future-mobile.jpg" />
             </div>
             <div style="text-align: center;"  class="desktop">
-                <img class="parrallax-image" width="77%"  src="assets/future-is-smart.png" />
+                <img class="parrallax-image" width="83.33%"  src="assets/future-is-smart.png" />
             </div>
 
             <div class="form-section">
@@ -100,7 +100,7 @@
     var image = document.getElementsByClassName("parrallax-image")
     var scooter = document.getElementsByClassName("scooter-image")
 
-    new simpleParallax(image)
+    new simpleParallax(image,{scale:1.2})
 
     new simpleParallax(scooter,{scale:1.15})
     if(window.innerWidth < 768) {
@@ -111,7 +111,7 @@
         video.addEventListener('click', ev => {
             console.log('ev: ', ev);
             video.muted = false;
-            document.getElementById("myvideo").play()
+            // document.getElementById("myvideo").play()
          })
 
     } else {
@@ -123,7 +123,7 @@
         video.addEventListener('click', ev => {
         console.log('ev: ', ev);
         video.muted = false;
-        document.getElementById("myvideo").play()
+        // document.getElementById("myvideo").play()
 
     })
     }
