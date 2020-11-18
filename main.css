@@ -148,13 +148,13 @@ input {
 
 .parallax-window-1-desktop {
   
-  min-height: 600px;
+  min-height: 1000px;
   background: transparent;
   /* background-color: yellow; */
 }
 .parallax-window-2-desktop {
   
-  min-height: 600px;
+  min-height: 1000px;
   background: transparent;
   /* background-color: yellow; */
 }
