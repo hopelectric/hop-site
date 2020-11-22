@@ -9,7 +9,7 @@
         <!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.5/parallax.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script> -->
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="main.css">
@@ -103,6 +103,18 @@
         </div>
 
     </body>
+
+    <style>
+        .parallax-window-1-desktop {
+              /* The image used */
+            background-image: url("assets/desktop - 1st fold.png");
+        }
+        .parallax-window-2-desktop {
+              /* The image used */
+            background-image: url("assets/desktop - 3rd fold.png");
+        }
+    </style>
+
     <script charset="utf-8" type="text/javascript" >
     jQuery(window).trigger('resize').trigger('scroll');
 
@@ -123,8 +135,6 @@
 
     } else {
         console.log("running desktop");
-        $('.parallax-window-1-desktop').parallax({imageSrc: 'assets/desktop - 1st fold.png'});
-        $('.parallax-window-2-desktop').parallax({imageSrc: 'assets/desktop - 3rd fold.png'});
 
         var video = document.getElementById("myvideo");
         video.muted = true;
