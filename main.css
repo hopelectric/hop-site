@@ -209,7 +209,7 @@ input {
     display: block;
   }
   .desktop {
-    display: none;
+    display: block;
   }
 
 }
